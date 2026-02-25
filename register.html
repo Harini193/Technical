@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+   
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 2px 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #667eea;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+    <h2>Register a Course</h2>
+
+    <form action="http://localhost:8080/courses/register" method="post">
+        
+         <label>Enter your Name:</label>
+        <input type="text" name="name" placeholder="Enter your name">
+
+        <label>Enter your Email:</label>
+        <input type="email" name="emailId" placeholder="Enter your email">
+
+        <label>Select Course:</label>
+        <select name="courseName">
+            <option value="Java Essentials">Java Essentials</option>
+            <option value="Python for ML">Python for ML</option>
+            <option value="Spring Boot">Spring Boot</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>
